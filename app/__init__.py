@@ -1,22 +1,22 @@
-import os
+# import os
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+# from flask_sqlalchemy import SQLAlchemy
+# from flask_migrate import Migrate
 from flask_cors import CORS
 
 # 중앙에서 확장 생성
-db = SQLAlchemy()
-migrate = Migrate()
+# db = SQLAlchemy()
+# migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'mysql+pymysql://myuser:mypassword@localhost/softwareproject')
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    # app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'mysql+pymysql://myuser:mypassword@localhost/softwareproject')
+    # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    # 확장 초기화
-    db.init_app(app)
-    migrate.init_app(app, db)
+    # # 확장 초기화
+    # db.init_app(app)
+    # migrate.init_app(app, db)
     CORS(app)
 
     # Blueprint 등록
