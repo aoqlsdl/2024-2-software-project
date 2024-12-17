@@ -2,7 +2,7 @@
 from flask import Flask
 # from flask_sqlalchemy import SQLAlchemy
 # from flask_migrate import Migrate
-from flask_cors import CORS
+# from flask_cors import CORS
 
 # 중앙에서 확장 생성
 # db = SQLAlchemy()
@@ -17,7 +17,7 @@ def create_app():
     # # 확장 초기화
     # db.init_app(app)
     # migrate.init_app(app, db)
-    CORS(app)
+    # CORS(app)
 
     # Blueprint 등록
     from .match.match_controller import match_bp
